@@ -1,0 +1,23 @@
+name: Code Quality Analysis
+on: [push, pull_request]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+    - name: Install Radon
+      run: pip install radon
+    - name: Run Radon Analysis
+      run: |
+        radon cc --json . > radon-report.json
+        radon mi --json . > maintainability-report.json
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: radon-reports
+        path: "*.json"
