@@ -45,3 +45,4 @@ pip install -e .
 
 [Apache License 2.0](LICENSE)
 # Coverage Test
+# Test after disabling automatic analysis
