@@ -10,7 +10,7 @@
 
 The name is a reference to the widely known [scikit-learn](https://scikit-learn.org/stable/) library.
 
-**fklearn Principles**
+**Clone fklearn Principles**
 
 1. Validation should reflect real-life situations.
 2. Production models should match validated models.
