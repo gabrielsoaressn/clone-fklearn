@@ -1,4 +1,4 @@
-# fklearn: Functional Machine Learning
+# clone fklearn: Functional Machine Learning
 
 ![PyPI](https://img.shields.io/pypi/v/fklearn.svg?style=flat-square)
 [![Documentation Status](https://readthedocs.org/projects/fklearn/badge/?version=latest)](https://fklearn.readthedocs.io/en/latest/?badge=latest)
@@ -7,6 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 **clone-fklearn** uses functional programming principles to make it easier to solve real problems with Machine Learning.
+
 
 The name is a reference to the widely known [scikit-learn](https://scikit-learn.org/stable/) library.
 
