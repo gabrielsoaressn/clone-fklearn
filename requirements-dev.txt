@@ -1,4 +1,9 @@
-pytest>=7.0.0
+pytest>=7.0.0,<8
 pytest-cov>=4.0.0
 coverage>=7.0.0
-pytest-xvfb  
+pytest-xvfb
+pytest-xdist>=3.3.1,<4
+mypy>=1.6.1,<2
+codecov>=2.0,<3
+hypothesis>=6.88.3,<7
+tqdm>=4.0.0

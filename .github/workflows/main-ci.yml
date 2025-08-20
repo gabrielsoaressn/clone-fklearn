@@ -26,18 +26,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Instala as dependências de desenvolvimento, que devem incluir as de teste
+          pip install -r requirements.txt
           pip install -r requirements-dev.txt
-          # Instala o seu pacote em modo "editável" para que o pytest o encontre
-          pip install -e .
+          pip install -r requirements_test.txt
+
 
       - name: Run tests and generate reports
         run: |
-          # Executa a sua suíte de testes completa na pasta 'tests'
-          # --cov=fklearn: Gera cobertura para o pacote 'fklearn'
-          # --cov-report=xml: Cria 'coverage.xml' para o SonarCloud
-          # --junitxml=test-results.xml: Cria o relatório de resultados de teste para o SonarCloud
-          pytest tests/ --cov=fklearn --cov-report=xml --junitxml=test-results.xml
+          pytest --cov=src --cov-report=xml --cov-report=term-missing --junitxml=test-results.xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2.1.1
