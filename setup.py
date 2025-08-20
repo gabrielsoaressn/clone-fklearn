@@ -14,17 +14,17 @@ def requirements_from_pip(filename='requirements.txt'):
 
 core_deps = requirements_from_pip()
 demos_deps = requirements_from_pip("requirements_demos.txt")
-test_deps = requirements_from_pip("requirements_test.txt")
-
 tools_deps = requirements_from_pip("requirements_tools.txt")
 
 lgbm_deps = requirements_from_pip("requirements_lgbm.txt")
 xgboost_deps = requirements_from_pip("requirements_xgboost.txt")
 catboost_deps = requirements_from_pip("requirements_catboost.txt")
+test_deps = requirements_from_pip("requirements-dev.txt")
 
 all_models_deps = lgbm_deps + xgboost_deps + catboost_deps
 all_deps = all_models_deps + tools_deps
 devel_deps = test_deps + all_deps
+
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
