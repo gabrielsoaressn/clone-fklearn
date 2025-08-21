@@ -22,7 +22,7 @@ class TestCommonDocstrings:
         
         assert isinstance(docstring, str)
         assert "test_learner" in docstring
-        assert "prediction function" in docstring.lower()
+        assert "predict function" in docstring.lower()
         assert "parameters" in docstring.lower()
     
     def test_learner_pred_fn_docstring_empty_name(self):
@@ -69,10 +69,9 @@ class TestDataFrameUtils:
     
     def test_dataframe_memory_usage(self):
         """Testa cálculo de uso de memória de DataFrames."""
-        rng = np.random.default_rng(seed=42)
         df = pd.DataFrame({
             'int_col': range(100),
-            'float_col': rng.standard_normal(100),
+            'float_col': np.random.default_rng(seed=42).standard_normal(100),
             'str_col': ['test'] * 100
         })
         
